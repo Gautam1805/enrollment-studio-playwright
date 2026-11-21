@@ -36,4 +36,13 @@ pytest tests/test_login.py     # one module
 pytest --headed                # watch the browser
 ```
 
-`APP_URL` overrides the application's address.
+`APP_URL` overrides the application's address. On a locked-down Windows machine where `pytest.exe` is blocked, use `python -m pytest` instead.
+
+## Reports
+
+Every run writes:
+
+- `reports/report.html` – the test report: each test with its description, result and duration, and a screenshot of the page embedded for every failed test. Open it with `start reports\report.html`.
+- `test-results/` – a video and a Playwright trace for every failed test. Replay a trace step by step with `python -m playwright show-trace test-results\<test>\trace.zip`.
+
+Useful extras: `-v` lists each test by name, `--headed` shows the browser, `--slowmo 500` slows each action down so you can follow it.

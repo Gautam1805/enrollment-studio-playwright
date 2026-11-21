@@ -5,6 +5,7 @@ __pycache__/
 venv/
 target/
 test-results/
+reports/
 .env
 .idea/
 .vscode/
