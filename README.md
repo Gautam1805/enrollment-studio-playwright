@@ -36,6 +36,12 @@ pytest tests/test_login.py     # one module
 pytest --headed                # watch the browser
 ```
 
+To watch one applicant go through the whole enrollment (profile, address, checks, a child dependent, plan, document, review, HIPAA consent, submit) in a single test:
+
+```
+python -m pytest tests/test_enrollment_journey.py --headed --slowmo 500 -v -s
+```
+
 `APP_URL` overrides the application's address. On a locked-down Windows machine where `pytest.exe` is blocked, use `python -m pytest` instead.
 
 ## Reports
